@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --cream: hsl(30, 38%, 92%);
+    --darkCyan: hsl(158, 36%, 37%); 
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+} 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:"Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 14px; */
+    min-height: 100vh;
+    background-color: var(--cream);
+    color: var(--darkGrayishBlue);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 300px;
+    background-color: var(--white);
+    border-radius: 20px;
+}
+.text{
+    padding: 20px;
+}
+.image{
+    display: none;
+}
+.alternative_image {
+    display: initial;
+    max-width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+.perfume_tag{
+    text-transform: uppercase;
+    padding: 10px 0px;
+    letter-spacing: 3px;
+    color: var(--darkGrayishBlue);
+}
+h1{
+    color: var(--veryDarkBlue);
+    font-family:"Fraunces", serif ;
+}
+
+.note{
+    line-height: 25px;
+    padding: 15px 0px;
+}
+
+/* table {
+    width: 100%;
+}
+th{
+    font-size: 35px;
+}
+
+td, th {
+    text-align: left;
+}  */
+
+.table {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.new_price {
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--darkCyan);
+    padding-right: 15px ;
+    font-family: "Fraunces", serif;
+}
+
+.old_price{
+    text-decoration: line-through;
+}
+button{
+    width: 100%;
+    background-color: var(--darkCyan);
+    border: none;
+    color: var(--white);
+    height: 40px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: var(--veryDarkBlue);
+}
+
+button img{
+    padding-right: 10px;
+}
+
+@media (min-width: 720px) {
+    .image {
+        display: initial;
+        max-width: 100%;
+        border-radius: 20px 0px 0px 20px;
+    }
+    .alternative_image {
+        display: none;
+    }
+    main{
+        flex-direction: row;
+        max-width: 700px;
+    }
+    .text{
+        padding: 30px;
+    }
+}
